@@ -1,8 +1,6 @@
 package me.iwf.photopicker.entity;
 
-import android.util.SparseBooleanArray;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
