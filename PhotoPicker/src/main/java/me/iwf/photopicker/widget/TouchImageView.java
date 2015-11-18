@@ -63,7 +63,7 @@ public class TouchImageView extends ImageView {
     //
 	private Matrix matrix, prevMatrix;
 
-    private static enum State { NONE, DRAG, ZOOM, FLING, ANIMATE_ZOOM };
+    private enum State { NONE, DRAG, ZOOM, FLING, ANIMATE_ZOOM }
     private State state;
 
     private float minScale;
@@ -401,7 +401,7 @@ public class TouchImageView extends ImageView {
     /**
      * Set zoom parameters equal to another TouchImageView. Including scale, position,
      * and ScaleType.
-     * @param TouchImageView
+     * @param img
      */
     public void setZoom(TouchImageView img) {
     	PointF center = img.getScrollPosition();
@@ -572,7 +572,8 @@ public class TouchImageView extends ImageView {
         	
         case CENTER_INSIDE:
         	scaleX = scaleY = Math.min(1, Math.min(scaleX, scaleY));
-        	
+        	break;
+
         case FIT_CENTER:
         	scaleX = scaleY = Math.min(scaleX, scaleY);
         	break;
